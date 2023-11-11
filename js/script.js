@@ -1,4 +1,4 @@
-let questionCounter = 1;
+let questionCounter = 0;
 
 function renderPlayQuizQuestions() {
   const urlParams = new URLSearchParams(window.location.search);
