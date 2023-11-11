@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/createQuiz.js"></script>
+    <script src="js/playQuiz.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Create Quiz</title>
   </head>
@@ -13,6 +15,12 @@
       <h1 id="createQuizH1">Create Quiz</h1>
       <h1 id="playQuizH1" style="display: none">Play Quiz</h1>
     </header>
+
+    <div id="playQuizNavbar" class="play-quiz-navbar" style="display: none">
+      <button type="button" class="navbar-button">Edit this quiz</button>
+      <button type="button" class="navbar-button">Create new quiz</button>
+      <button type="button" class="navbar-button">Share this quiz</button>
+    </div>
 
     <main>
       <div id="createQuizDiv" style="display: block">
