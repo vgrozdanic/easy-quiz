@@ -5,9 +5,20 @@ function submitPlayQuiz() {
 
   let score = 0;
   quizQuestions.forEach((quizQuestion, idx) => {
-    const userAnswer = document.getElementById(`playQuizAnswer${idx}`).value;
-    if (userAnswer === quizQuestion.answer) {
+    const answerElement = document.getElementById(`playQuizAnswer${idx}`);
+    const userAnswer = answerElement.value;
+    if (
+      userAnswer.trim().toLowerCase() ===
+      quizQuestion.answer.trim().toLowerCase()
+    ) {
       score++;
+      // make the border green when the answer is correct
+      answerElement.style.borderColor = "green";
+      answerElement.style.borderStyle = "solid";
+    } else {
+      // make the border red when the answer is wrong
+      answerElement.style.borderColor = "red";
+      answerElement.style.borderStyle = "solid";
     }
   });
 
