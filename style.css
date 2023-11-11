@@ -29,6 +29,15 @@ button {
     margin-top: 10px;
 }
 
+.navbar-button {
+    background-color: #1640D6;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;        
+}
+
 .submit-button {
     background-color: #4CAF50;
     color: white;    
