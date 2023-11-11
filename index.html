@@ -9,21 +9,44 @@
   </head>
 
   <body>
-    <h1>Create Quiz</h1>
+    <header>
+      <h1 id="createQuizH1">Create Quiz</h1>
+      <h1 id="playQuizH1" style="display: none">Play Quiz</h1>
+    </header>
 
-    <form id="quizForm">
-      <div id="questionsContainer">
-        <div class="question">
-          <label for="question1">Question 1:</label>
-          <input type="text" id="question1" name="question1" required />
+    <main>
+      <div id="createQuizDiv" style="display: block">
+        <form id="createQuizForm">
+          <div id="questionsContainer">
+            <div class="question">
+              <label for="question1">Question 1:</label>
+              <input type="text" id="question1" name="question1" required />
 
-          <label for="answer1">Answer:</label>
-          <input type="text" id="answer1" name="answer1" required />
-        </div>
+              <label for="answer1">Answer:</label>
+              <input type="text" id="answer1" name="answer1" required />
+            </div>
+          </div>
+
+          <button type="button" onclick="addQuestion()">Add Question</button>
+          <button type="button" onclick="submitForm()">Submit Quiz</button>
+        </form>
       </div>
 
-      <button type="button" onclick="addQuestion()">Add Question</button>
-      <button type="submit">Submit Quiz</button>
-    </form>
+      <!-- Quiz part -->
+      <div id="playQuizDiv" style="display: none">
+        <form id="playQuizForm">
+          <div id="playQuizContainer"></div>
+          <button type="button" onclick="submitPlayQuiz()">Check</button>
+        </form>
+
+        <div id="playQuizResult" style="display: none">
+          <h2>Result</h2>
+          <p id="playQuizResultText"></p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Made with &#9829;</p>
+    </footer>
   </body>
 </html>
