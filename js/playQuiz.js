@@ -1,29 +1,3 @@
-function renderPlayQuizQuestions(quizData) {
-  const quizQuestions = JSON.parse(atob(quizData));
-  console.log(quizQuestions);
-
-  const playQuizContainer = document.getElementById("playQuizContainer");
-
-  quizQuestions.forEach((quizQuestion, idx) => {
-    const newQuestionDiv = document.createElement("div");
-    newQuestionDiv.classList.add("playQuizQuestion");
-
-    const labelQuestion = document.createElement("label");
-    labelQuestion.htmlFor = `playQuizQuestion${idx}`;
-    labelQuestion.textContent = quizQuestion.question;
-    newQuestionDiv.appendChild(labelQuestion);
-
-    const inputAnswer = document.createElement("input");
-    inputAnswer.type = "text";
-    inputAnswer.id = `playQuizAnswer${idx}`;
-    inputAnswer.name = `playQuizAnswer${idx}`;
-    inputAnswer.required = true;
-    newQuestionDiv.appendChild(inputAnswer);
-
-    playQuizContainer.appendChild(newQuestionDiv);
-  });
-}
-
 function submitPlayQuiz() {
   const urlParams = new URLSearchParams(window.location.search);
   quizData = urlParams.get("data");

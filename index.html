@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="js/script.js"></script>
-    <script src="js/createQuiz.js"></script>
+    <script src="js/navbarButtons.js"></script>
     <script src="js/playQuiz.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Create Quiz</title>
@@ -17,23 +17,29 @@
     </header>
 
     <div id="playQuizNavbar" class="play-quiz-navbar" style="display: none">
-      <button type="button" class="navbar-button">Edit this quiz</button>
-      <button type="button" class="navbar-button">Create new quiz</button>
-      <button type="button" class="navbar-button">Share this quiz</button>
+      <button type="button" onclick="onClickEditQuiz()" class="navbar-button">
+        Edit this quiz
+      </button>
+      <button
+        type="button"
+        onclick="onClickCreateNewQuiz()"
+        class="navbar-button"
+      >
+        Create new quiz
+      </button>
+      <button
+        type="button"
+        onclick="onClickShareThisQuiz()"
+        class="navbar-button"
+      >
+        Share this quiz
+      </button>
     </div>
 
     <main>
       <div id="createQuizDiv" style="display: block">
         <form id="createQuizForm">
-          <div id="questionsContainer">
-            <div class="question">
-              <label for="question1">Question 1:</label>
-              <input type="text" id="question1" name="question1" required />
-
-              <label for="answer1">Answer:</label>
-              <input type="text" id="answer1" name="answer1" required />
-            </div>
-          </div>
+          <div id="questionsContainer"></div>
 
           <button type="button" onclick="addQuestion()">Add Question</button>
           <button type="button" class="submit-button" onclick="submitForm()">
