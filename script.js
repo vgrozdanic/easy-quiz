@@ -64,7 +64,7 @@ function renderPlayQuizQuestions(quizData) {
     const newQuestionDiv = document.createElement("div");
     newQuestionDiv.classList.add("playQuizQuestion");
 
-    const labelQuestion = document.createElement("playQuizLabel");
+    const labelQuestion = document.createElement("label");
     labelQuestion.htmlFor = `playQuizQuestion${idx}`;
     labelQuestion.textContent = quizQuestion.question;
     newQuestionDiv.appendChild(labelQuestion);

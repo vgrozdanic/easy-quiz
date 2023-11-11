@@ -28,7 +28,9 @@
           </div>
 
           <button type="button" onclick="addQuestion()">Add Question</button>
-          <button type="button" onclick="submitForm()">Submit Quiz</button>
+          <button type="button" class="submit-button" onclick="submitForm()">
+            Submit Quiz
+          </button>
         </form>
       </div>
 
@@ -36,7 +38,13 @@
       <div id="playQuizDiv" style="display: none">
         <form id="playQuizForm">
           <div id="playQuizContainer"></div>
-          <button type="button" onclick="submitPlayQuiz()">Check</button>
+          <button
+            type="button"
+            class="submit-button"
+            onclick="submitPlayQuiz()"
+          >
+            Check
+          </button>
         </form>
 
         <div id="playQuizResult" style="display: none">
@@ -46,7 +54,18 @@
       </div>
     </main>
     <footer>
-      <p>Made with &#9829;</p>
+      <div
+        id="footerDiv"
+        style="
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <p>Made with</p>
+        <p style="color: red; font-size: 25px; margin-left: 5px">&#9829;</p>
+      </div>
     </footer>
   </body>
 </html>

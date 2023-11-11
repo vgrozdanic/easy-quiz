@@ -1,6 +1,7 @@
 label {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 3px;
 }
 
 body {
@@ -16,3 +17,23 @@ footer {
     transform: translateX(-50%);
     left: 50%;
 }
+
+input {
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
